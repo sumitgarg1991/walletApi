@@ -1,0 +1,10 @@
+server:
+port: 8080
+datasource:
+url: jdbc:postgresql://db:5432/qwik2pay
+username: qwik
+password: secret
+
+spring:
+  application:
+    name: wallet
