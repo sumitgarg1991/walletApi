@@ -1,10 +1,15 @@
-server:
-port: 8080
-datasource:
-url: jdbc:postgresql://db:5432/qwik2pay
-username: qwik
-password: secret
-
 spring:
-  application:
-    name: wallet
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SYSTEM
+    password: admin
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+
+  sql:
+    init:
+      mode: always
